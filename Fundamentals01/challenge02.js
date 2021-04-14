@@ -17,8 +17,9 @@ console.log(heightJohn)
 //CALCS
 const BMIMark = massMark / heightMark ** 2;
 const BMIJohn = massJohn / heightJohn ** 2;
-//console.log(BMIMark, BMIJohn);
 
+
+//Condition Block
 if (BMIMark > BMIJohn) {
     console.log(`Mark's BMI(${BMIMark}) is higher than John's(${BMIJohn})!`);
 } else {
