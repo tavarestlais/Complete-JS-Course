@@ -29,3 +29,11 @@ console.log(population >= averagePopulation);
 
 let description
 console.log(country + ' is in ' + continent + ', and its ' + population + ' people speaking ' + language);
+
+const newDescription = `${country} is in ${continent}, and there is ${population} people speaking ${language}`;
+
+if (population >= averagePopulation) {
+    console.log(`${country}'s population is above average.`);
+} else {
+    console.log(`${country}s population is ${averagePopulation - population} below average`);
+};

@@ -40,4 +40,6 @@ let x, y;
 x = y = 25 - 20 - 5;
 console.log(x, y);
 
+const averageAge = (ageAhri + ageLux) / 2;
+console.log(ageAhri, ageLux, averageAge);
 
