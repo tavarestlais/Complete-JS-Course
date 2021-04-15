@@ -8,6 +8,8 @@ logger(); //aqui nao adianta passar parâmetro, afinal, não tem return
 logger();
 logger();
 
+
+
 function fruitProcessor(apples, oranges) {   //espaço vazio que precisamos preencher quando chamamos a função
     console.log(apples, oranges);
     const juice = `Juice with  ${apples} apples 🍎 and ${oranges} oranges 🍊`;
