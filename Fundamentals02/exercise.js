@@ -89,7 +89,16 @@ const myCountry = {
     capital: 'Brasilia',
     language: 'Portuguese',
     population: 211,
-    neighbours: ['Bolivia', 'Paraguay', 'Uruguay', 'Argentina', 'Peru',]
+    neighbours: ['Bolivia', 'Paraguay', 'Uruguay', 'Argentina', 'Peru',],
+
+    describe: function () {
+        return `${this.country}, which the capital is ${this.capital}, has ${this.population} million people speaking ${this.language}. Some of the neighbours of ${this.country} are ${this.neighbours}.`;
+    },
+
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length === 0 ? true : false;
+    }
+
 }
 
 console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbours and a capital called ${myCountry.capital}`);
@@ -101,3 +110,40 @@ console.log(myCountry.population);
 //INCREASE USING BRACKETS NOTATION
 myCountry['population'] -= 2;
 console.log(myCountry.population);
+
+console.log(myCountry.describe());
+myCountry.checkIsland();
+console.log(myCountry);
+
+//LOOP
+for (let vote = 1; vote <= 5; vote++) { //it can be any number you want
+    console.log(`'Voter number ${vote} is currently voting`);
+}
+
+//LECTURE: Looping Arrays, Breaking and Continuing
+const populationsLoop = [221, 1366, 126, 37]; //brazil, india, Japan and Canada
+
+
+const percentageLoop = [];
+
+for (let i = 0; i < populationsLoop.length; i++) {
+    const perc = percentageOfWorld1(populationsLoop[i]);
+    percentageLoop.push(perc);
+}
+
+console.log(percentageLoop);
+
+//LECTURE  Looping Backwards and Loops in Loops
+
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']];
+
+console.log(listOfNeighbours);
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let y = 0; y < listOfNeighbours[i].length; y++) {
+        console.log(`Neighbours: ${listOfNeighbours[i][y]}`);
+    }
+}
